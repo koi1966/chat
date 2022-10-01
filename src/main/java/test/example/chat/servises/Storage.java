@@ -18,10 +18,8 @@ public class Storage {
     private Queue<ChatMessage> messages = new ConcurrentLinkedQueue<>();
     private ComponentEventBus eventBus = new ComponentEventBus(new Div());
 
-
     public void addRecord(String user, String message) {
         messages.add(new ChatMessage(user,message));
-
     }
 
     @Getter
@@ -29,7 +27,6 @@ public class Storage {
     public static class ChatMessage{
         private String name;
         private String message;
-
     }
 
     public static class ChatEvent extends ComponentEvent<Div>{

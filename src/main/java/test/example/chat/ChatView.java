@@ -30,7 +30,6 @@ public class ChatView extends VerticalLayout {
                 .setAutoWidth(true)
                 .setHeader("Hello people ..");
         TextField field = new TextField();
-
         add(
                 new H3("Chat.."),
                 grid,
@@ -45,11 +44,8 @@ public class ChatView extends VerticalLayout {
                                 addClickShortcut(Key.ENTER);
                             }}
                     );
-
                 }}
-
         );
-        ;
     }
 
     private String renderRow(Storage.ChatMessage message) {
